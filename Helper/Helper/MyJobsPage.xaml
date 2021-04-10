@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Helper"
+             x:Class="Helper.MyJobsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                 IconImageSource="{local:imageResource Helper.Images.plus.png}"
+                 Order="Primary"
+                 Priority="1" 
+                 Clicked="AddButton_Clicked"
+                 />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="list" ItemTapped="JobItemTapped" IsPullToRefreshEnabled="true" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="20,0">
+                        <Label x:Name="title" FontSize="15" FontAttributes="Bold" Text="{Binding title}"/>
+                        <Label x:Name="desc" FontSize="14" Text="{Binding desc}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

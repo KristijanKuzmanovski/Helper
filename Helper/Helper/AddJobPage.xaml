@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Helper.AddJobPage"
+             xmlns:local="clr-namespace:Helper"
+             Title="Add Job"
+             >
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="40,0">
+            <Entry Placeholder="Name" x:Name="name"/>
+            <Entry Placeholder="Lastname" x:Name="lastname"/>
+            <Entry Placeholder="Phone" Keyboard="Telephone" x:Name="phone"/>
+            <Entry Placeholder="Title" x:Name="title"/>
+            <Editor Placeholder="Describe the request..." HeightRequest="100" Keyboard="Chat" x:Name="job"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <ImageButton BackgroundColor="White" Source="{local:imageResource Helper.Images.add_image.png}" Clicked="AddImageButton_Clicked" HeightRequest="50" WidthRequest="50" Padding="10" HorizontalOptions="Start" Margin="0,10" />
+                <StackLayout x:Name="ImageInfoStack" Orientation="Horizontal" HorizontalOptions="FillAndExpand" IsVisible="False">
+                    <Label x:Name="ImageLabel" VerticalOptions="Center" Text="image attached"/>
+                <ActivityIndicator x:Name="spinner"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Fill"
+                                   Color="Blue"
+                                   />
+                <ImageButton BackgroundColor="White" Source="{local:imageResource Helper.Images.trash.png}" HeightRequest="20" WidthRequest="20" Margin="0,20" Clicked="DeleteImageButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Add job" Clicked="AddJobButton_Clicked"/>
+        </StackLayout>
+    
+    
+</ContentPage>

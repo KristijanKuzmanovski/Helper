@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Helper.DetailPage"
+             xmlns:local="clr-namespace:Helper"
+             Title="Details"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="image" Source="{local:imageResource Helper.Images.no_image.png}" WidthRequest="170" HeightRequest="170" Margin="10,10"/>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="fullname"  FontSize="20" Margin="0,40,0,0" FontAttributes="Bold"/>
+                    <Label x:Name="phone"  FontSize="15"/>
+                </StackLayout>
+            </StackLayout>
+            <Label x:Name="title" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"  Margin="0,15,0,10"/>
+            <Label x:Name="desc" FontSize="15" Margin="20,0" />
+            <StackLayout Orientation="Horizontal" x:Name="buttons" IsVisible="false" HorizontalOptions="Center">
+                <ImageButton Source="{local:imageResource Helper.Images.checkmark.png}" HeightRequest="100" WidthRequest="100" Margin="15,20"  BackgroundColor="White" Clicked="DeleteJob"/>
+                <ImageButton Source="{local:imageResource Helper.Images.cross_mark.png}" HeightRequest="100" WidthRequest="100" Margin="15,20" BackgroundColor="White" Clicked="DeleteJob"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
