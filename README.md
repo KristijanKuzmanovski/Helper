@@ -4,4 +4,4 @@ App for Android and IOS that provides humanitarian aid for those in need in a ti
 Framework: Xamarin\
 Backend: C#\
 Frontend: XAML\
-Stoarge: Firebase Realtime Database, Firbase Storage\
+Stoarge: Firebase Realtime Database, Firbase Storage
